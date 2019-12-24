@@ -1,0 +1,221 @@
+.Backg{
+    background-color: #282c34;
+    justify-content: center;
+    flex-direction: column;
+    font-size: calc(10px + 2vmin);
+    min-height: 80vh;
+    align-items: center;
+    display: flex;
+    color:white;
+    height:50%;
+    background-image: url("/src/fst.jpg");
+}
+.fil{
+    background-color: #D2B48C;
+}
+.card{
+    background-color: red;
+}
+.form{
+    padding-left:30%;
+}
+.button {
+    border-radius: 13px;
+    width:40%;
+    height:100%;
+    background-color: #4CAF50;
+    padding:10px;
+    cursor: pointer;
+    margin: 15px;
+}
+.button4 {
+    border-radius: 13px;
+    width:30%;
+    height:100%;
+    background-color: #FFA07A;
+    padding:10px;
+    cursor: pointer;
+    margin: 15px;
+}
+.button5 {
+    border-radius: 13px;
+    width:30%;
+    height:100%;
+    background-color: #D2B48C;
+    padding:10px;
+    cursor: pointer;
+    margin: 15px;
+}
+.button:after {
+    background-color: #3e8e41;
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover  {
+    background-color: #3e8e41;
+    padding-right: 25px;
+}
+
+.button:hover:after {
+    background-color: #3e8e41;
+    opacity: 1;
+    right: 0;
+}
+
+.button1 {
+    border-radius: 20px;
+    width:40%;
+    height:100%;
+    background-color: #DAA520;
+    display: inline-block;
+    padding:10px;
+    margin: 15px;
+
+}
+.button1:after {
+    background-color: #FFD700;
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button1:hover  {
+    background-color: #FFD700;
+    padding-right: 25px;
+}
+
+.button1:hover:after {
+    background-color:#FFD700;
+    opacity: 1;
+    right: 0;
+}
+
+.button2 {
+    border-radius: 20px;
+    width:40%;
+    height:100%;
+    background-color: #FF7F50;
+    display: inline-block;
+    padding:10px;
+    margin: 15px;
+
+}
+.button2:after {
+    background-color: #D2691E;
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button2:hover  {
+    background-color: #D2691E;
+    padding-right: 25px;
+}
+
+.button2:hover:after {
+    background-color: #D2691E;
+    opacity: 1;
+    right: 0;
+}
+
+
+.button3 {
+    border-radius: 20px;
+    width:40%;
+    height:100%;
+    background-color:#BC8F8F;
+    display: inline-block;
+    padding:10px;
+    margin: 15px;
+}
+.button3:after {
+    background-color: #DDA0DD;
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button3:hover  {
+    background-color:#DDA0DD;
+    padding-right: 25px;
+}
+
+.button3:hover:after {
+    background-color:#DDA0DD;
+    opacity: 1;
+    right: 0;
+}
+
+.buttonAdd{
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    width: 5%;
+    height:0;
+    margin: 4px 2px;
+    justify-content: center;
+    padding-bottom: 5%;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.nav{
+
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    box-shadow: none;
+
+
+
+
+}
+
+.navAd{
+    display: flex;
+    padding-top: 7%;
+    height:6em;
+}
+
+.tableCh{
+    padding-top: 2%;
+}
+
+.nav li a {
+    display:flex;
+    text-decoration: none;
+    margin: 0 1em;
+    line-height: 4px;
+    color: black
+;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    width: 90vw;
+    margin: 0;
+    height: 4em;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+}
