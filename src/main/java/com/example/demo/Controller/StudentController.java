@@ -79,7 +79,9 @@ public class StudentController {
             eval.setNoteDS(0);
             evaluationRepository.save(eval);
         }
-        return studentRepository.findAll();
+        List<Student> stdlist=studentRepository.findStudentByGroup(group_id);
+
+        return stdlist;
 
 
     }
