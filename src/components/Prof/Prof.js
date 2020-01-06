@@ -127,7 +127,7 @@ export default class Stuff extends Component
                 const listp= this.state.profList;
                 listp.splice(ind, 1);
                 this.setState({
-                    listp
+                   listp
                 })
             })
             .catch(error => {
