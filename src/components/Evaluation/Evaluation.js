@@ -54,7 +54,7 @@ export default class Evaluation extends Component {
             console.log(error);
         }
     }
-    editStuff(index,id,noteDS,noteExam){
+    editStuff(index,id,noteDS,noteExam,moy){
        this.setState({noteDS : noteDS,noteExam:noteExam})
         this.setState(
             {
@@ -68,7 +68,7 @@ export default class Evaluation extends Component {
         const edI = this.state.editIndex;
         this.state.students[edI].noteDS=this.state.noteDS;
         this.state.students[edI].noteExam=this.state.noteExam;
-        this.state.students[edI].moy=this.state.moy;
+        //this.state.students[edI].moy=this.state.moy;
         const ds=this.state.noteDS;
         console.log(ds);
         const exam=this.state.noteExam;
@@ -78,6 +78,7 @@ export default class Evaluation extends Component {
                 this.setState({
                     moy : response.data
                 });
+                this.state.students[edI].moy=response.data;
                 this.setState({
                     editM:null,
                     editIndex : null
@@ -94,13 +95,13 @@ export default class Evaluation extends Component {
                 noteDS : e.target.value
             })}
     }
-    updateDS(e){
+    /*updateDS(e){
 
         if( e.target.value !== this.state.Moy){
             this.setState({
                 moy : e.target.value
             })}
-    }
+    }*/
     updateExam(e){
         if( e.target.value !== this.state.noteExam){
             this.setState({
@@ -150,6 +151,12 @@ export default class Evaluation extends Component {
         })
 
 
+    }
+    canceleditEval(){
+        this.setState({
+            editIndex : null,
+            editM:null
+        })
     }
 
     render(){
@@ -245,8 +252,9 @@ export default class Evaluation extends Component {
                                             this.incrementer(index,value.id,value.nbAbs)
                                         }} className="btn btn-danger">absent</button></td>
 
-                                        <td className="centerAll" id={index+10+'edit'}><button
-                                       className="btn btn-primary">Cancel</button></td>
+                                        <td className="centerAll" id={index+10+'edit'}><button onClick={()=>{
+                                            this.canceleditEval()
+                                        }} className="btn btn-primary">Cancel</button></td>
                                         <td className="centerAll" id={index+11+'edit'}><button onClick={()=>{
                                             this.updateNotes(index,value.id,value.noteDS,value.noteExam)
                                         }} className="btn btn-info">Update</button></td>
