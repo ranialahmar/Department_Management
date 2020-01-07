@@ -90,11 +90,13 @@ public class SubjectController {
         return subjectRepository.findSubjectById(sbj_id);
     }
 
-    @PutMapping(path = "/subjectUpdProf/{sbj_id}/{id_prof}")
-    public  @ResponseBody Subject updateSubjectProf( @PathVariable Long sbj_id, @PathVariable Long id_prof) {
+    @PutMapping(path = "/subjectUpdProf/{sbj_id}/{firstName}")
+    public  @ResponseBody Subject updateSubjectProf( @PathVariable Long sbj_id, @PathVariable String firstName) {
 
         Subject sbj = subjectRepository.findSubjectById(sbj_id);
-        Prof prof= profRepository.findProfById(id_prof);
+        Long ii=profRepository.getProfByFirstName(firstName);
+        System.out.println(ii);
+        Prof prof= profRepository.findProfById(ii);
         sbj.setSubject(sbj.getSubject());
         sbj.setProf(prof);
 

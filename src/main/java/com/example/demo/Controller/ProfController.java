@@ -36,6 +36,8 @@ public class ProfController {
     @GetMapping(path="/prof/{firstname}")
     public @ResponseBody
     Long getProf (@PathVariable String firstname) {
+
+
         return profRepository.getProfByFirstName(firstname);
     }
 
